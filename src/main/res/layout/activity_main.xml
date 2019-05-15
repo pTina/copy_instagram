@@ -199,6 +199,7 @@
                 android:orientation="horizontal"
         >
             <ImageButton
+                    android:id="@+id/ibtGridPhoto"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -217,15 +218,29 @@
 
     </LinearLayout>
 
-    <ScrollView
-            android:id="@+id/svMainPhoto"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/MainPhoto"
             android:layout_weight="3"
-    >
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
 
-    </ScrollView>
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMainPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="@id/MainPhoto"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 
